@@ -1,71 +1,83 @@
-# Fred_Data_-_Repo 📊
+# 📊 Fred_Data_-_Repo
 
-A data engineering and analytics pipeline built using **Databricks**, **Delta Lake**, and **Power BI**, powered by daily, monthly, and quarterly macroeconomic data sourced from the FRED API.
+A modern **data engineering and analytics pipeline** built with **Databricks**, **Delta Lake**, and **Power BI**, ingesting macroeconomic data directly from the [FRED API](https://fred.stlouisfed.org/). The system transforms **daily**, **monthly**, and **quarterly** indicators into clean, queryable Delta tables stored in **Azure Blob Storage Gen2**.
 
-## 🏗️ Project Structure
+---
 
-This repo contains modular ETL notebooks designed to orchestrate and transform economic indicators into structured delta tables.
+## 🏗️ Project Overview
 
-### 📁 Notebooks
+This repo contains modular, production-grade ETL notebooks that process and unify macroeconomic time-series data into a curated data lakehouse.
+
+### 🔁 Pipeline Highlights
+
+- Automated ingestion and transformation of FRED datasets
+- Full support for **daily**, **monthly**, and **quarterly** economic indicators
+- Lakehouse architecture with **Delta Lake** and **Azure Storage**
+- Seamless integration with **Power BI** for visualization
+- Metadata logging and schema evolution
+
+---
+
+## 📁 Notebooks
 
 | Notebook | Description |
 |----------|-------------|
-| `00_dim_date_builder` | Builds a unified date dimension from daily, monthly, and quarterly sources. |
-| `01_fred_daily_pipeline` | Ingests and processes daily indicators like interest rates and oil prices. |
-| `02_fred_monthly_pipeline` | Ingests and transforms monthly data such as CPI and income statistics. |
-| `03_fred_quarterly_pipeline` | Processes GDP and corporate profits from quarterly FRED datasets. |
-| `04_fred_orchestrator` | Orchestrates the full pipeline from staging to data warehouse registration. |
+| `00_dim_date_builder` | Builds a unified date dimension table supporting daily, monthly, and quarterly granularities. |
+| `01_fred_daily_pipeline` | Ingests and processes daily indicators like Federal Funds Rate, WTI Oil Prices, and Treasury Yields. |
+| `02_fred_monthly_pipeline` | Ingests and transforms monthly macroeconomic data such as CPI, income statistics, and retail growth. |
+| `03_fred_quarterly_pipeline` | Loads GDP and corporate profits from quarterly datasets. |
+| `04_fred_orchestrator` | Orchestrates all pipeline stages end-to-end, from raw ingestion to warehouse registration. |
 
 ---
 
-## 🗃️ Data Lake Locations (Delta)
+## 🗃️ Data Architecture (Delta Lake on Azure)
 
-The following delta tables are registered:
+All tables are materialized as Delta tables and saved to **Azure Blob Storage Gen2**. The following tables are available in the `default` catalog:
 
-- `default.fact_macro_daily`
-- `default.fact_macro_monthly`
-- `default.fact_macro_quarterly`
-- `default.dim_date`
-- `default.job_metadata`
+- `fact_macro_daily`
+- `fact_macro_monthly`
+- `fact_macro_quarterly`
+- `dim_date`
+- `job_metadata` (pipeline logs)
 
-## 🛠️ Technologies
+---
 
-- **Databricks**
-- **PySpark**
+## ⚙️ Technologies Used
+
+- **Databricks (Notebooks + Jobs)**
+- **Apache Spark (PySpark)**
 - **Delta Lake**
+- **Azure Blob Storage Gen2**
 - **Power BI**
-- **Azure Storage**
-- **GitHub Integration**
+- **FRED API**
+- **GitHub** (for CI/CD and version control)
 
 ---
 
-## 🚀 Deployment
+## 📈 Dashboards
 
-1. Clone the repository inside Databricks Repos.
-2. Ensure cluster is running (DBR 13.3+ with Photon preferred).
-3. Run `04_fred_orchestrator` to trigger full data pipeline.
-4. Connect output tables to Power BI for visualization.
+🚧 *Coming Soon*: Power BI dashboards that visualize key economic trends across:
 
----
-
-## 🔒 Git Integration Setup (Databricks)
-
-If you're seeing auth errors:
-- Make sure you have a valid GitHub PAT (token) with `repo` access.
-- In Databricks → **User Settings** → **Git Integration**, paste the token.
+- 📉 GDP & Corporate Profits (Quarterly)
+- 📊 CPI, Retail Sales, and Income Growth (Monthly)
+- 💰 Interest Rates, Oil Prices, Treasury Yields (Daily)
 
 ---
 
-## 📈 Sample Dashboards
+## 📌 Status
 
-Coming soon – Power BI dashboards visualizing GDP trends, CPI, interest rates, and more.
+👍 Currently in use  
+🔜 Public dashboard release and CI/CD pipeline documentation in progress
 
 ---
 
-## License
+## 📄 License
 
 This project is licensed under the [Apache 2.0 License](LICENSE).
 
 ---
 
-Created with ❤️ by Ronen Lasnick
+## 👨‍💻 Author
+
+Built with ❤️ by **Ronen Lasnick**  
+Feel free to fork, contribute, or reach out for collaborations.
