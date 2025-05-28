@@ -1,4 +1,4 @@
-# 📊 Fred_Data_-_Repo
+# 📊 US Macro Economic Insights
 
 A modern **data engineering and analytics pipeline** built with **Databricks**, **Delta Lake**, and **Power BI**, ingesting macroeconomic data directly from the [FRED API](https://fred.stlouisfed.org/). The system transforms **daily**, **monthly**, and **quarterly** indicators into clean, queryable Delta tables stored in **Azure Blob Storage Gen2**.
 
