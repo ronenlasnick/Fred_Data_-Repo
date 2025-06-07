@@ -56,12 +56,10 @@ All tables are materialized as Delta tables and saved to **Azure Blob Storage Ge
 
 ## 📈 Dashboards
 
-🚧 *Coming Soon*: Power BI dashboards that visualize key economic trends across:
 
 - 📉 GDP & Corporate Profits (Quarterly)
 - 📊 CPI, Retail Sales, and Income Growth (Monthly)
 - 💰 Interest Rates, Oil Prices, Treasury Yields (Daily)
-
 ---
 
 ## 📌 Status
@@ -79,5 +77,5 @@ This project is licensed under the [Apache 2.0 License](LICENSE).
 
 ## 👨‍💻 Author
 
-Built with ❤️ by **Ronen Lasnick**  
+Built with ❤️ by **Ronen Lesnick**  
 Feel free to fork, contribute, or reach out for collaborations.
