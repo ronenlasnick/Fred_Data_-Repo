@@ -62,12 +62,6 @@ All tables are materialized as Delta tables and saved to **Azure Blob Storage Ge
 - 💰 Interest Rates, Oil Prices, Treasury Yields (Daily)
 ---
 
-## 📌 Status
-
-👍 Currently in use  
-🔜 Public dashboard release and CI/CD pipeline documentation in progress
-
----
 
 ## 📄 License
 
