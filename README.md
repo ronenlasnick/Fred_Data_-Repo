@@ -60,6 +60,7 @@ All tables are materialized as Delta tables and saved to **Azure Blob Storage Ge
 - 📉 GDP & Corporate Profits (Quarterly)
 - 📊 CPI, Retail Sales, and Income Growth (Monthly)
 - 💰 Interest Rates, Oil Prices, Treasury Yields (Daily)
+- [View Full Project](https://ronenlasnick.github.io/github-fred/?utm_source=readme&utm_medium=github&utm_campaign=fred_macro)
 ---
 
 
