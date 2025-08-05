@@ -72,5 +72,5 @@ This project is licensed under the [Apache 2.0 License](LICENSE).
 
 ## 👨‍💻 Author
 
-Built with ❤️ by **Ronen Lesnick**  
+Built with ❤️ by **Ronen**  
 Feel free to fork, contribute, or reach out for collaborations.
